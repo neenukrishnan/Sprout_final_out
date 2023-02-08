@@ -63,7 +63,7 @@
           
       
           <section id='background-video'>
-                <video autoplay muted loop playsinline>
+                <video autoplay muted loop playsinline id="myvideo">
                   <source src="images/Web_Banner_01.mp4" type="video/mp4">
               </video>  
               
@@ -419,5 +419,11 @@
   
 </script>
 
+<script>
+  var video = document.getElementById("myvideo");
+  video.addEventListener("canplay", function() {
+    video.play();
+  });
+  </script>
 </body>
 </html>
